@@ -1,0 +1,576 @@
+@import url(/css/reset.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Moon MoonTime-Regular;
+  src: url(/fuente/MoonTime-Regular.otf);
+}
+/*NAVBAR*/
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+.nav-bar .nav-logo h1 {
+  font-family: Moon MoonTime-Regular;
+  font-size: 5em;
+  margin: 0 0 0 10px;
+}
+.nav-bar .nav-logo h2 {
+  font-family: "Dosis", sans-serif;
+  margin: 0 0 0 10px;
+  font-size: 15px;
+}
+.nav-bar .nav-main .nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 30px 0 0;
+}
+.nav-bar .nav-main .nav-link {
+  text-decoration: none;
+  padding: 0 3vw;
+  font-family: "Dosis", sans-serif;
+  color: black;
+}
+.nav-bar .nav-icons {
+  margin: 0 6% 0 0;
+  padding: 10px;
+}
+.nav-bar .nav-icons i {
+  color: black;
+  margin-right: 20px;
+  font-size: 2rem;
+}
+.nav-bar .nav-icons i:hover {
+  transform: scale(1.5);
+  color: #a0a0a0;
+  transition-duration: 0.3s;
+}
+.nav-bar .nav-icons a {
+  text-decoration: none;
+}
+.nav-bar .burger {
+  display: none;
+  cursor: pointer;
+}
+.nav-bar .burger div {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  height: 3px;
+  background-color: #ac70bd;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/*SHOWCASE*/
+.showcase {
+  width: 100vw;
+  min-height: 80xh;
+  background: url(/IMAGENES/showcase.png) no-repeat fixed center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+.showcase h1 {
+  margin-left: 200px;
+  font-family: Moon MoonTime-Regular;
+  font-size: 200px;
+  color: rgba(92, 61, 22, 0.61);
+}
+.showcase .button a {
+  margin-left: 250px;
+  font-size: 50px;
+  grid-row-start: 3;
+  font-family: "Lato", sans-serif;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+.showcase .button a:hover {
+  color: black;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+/*GALERY*/
+.mini-servicios-container {
+  width: 100%;
+  height: 70%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+.mini-servicios-container h2 {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 10px;
+  font-family: Moon MoonTime-Regular;
+  color: #88887b;
+}
+.mini-servicios-container .mini-servicios-grupos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+  justify-content: center;
+}
+.mini-servicios-container .servicios-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mini-servicios-container .servicios-wrapper img {
+  width: 400px;
+  min-height: 400px;
+  border-radius: 50%;
+  opacity: 0.5;
+  border: 30px #0000008c solid;
+}
+.mini-servicios-container .servicios-wrapper p {
+  margin-top: 0 50px 0 0;
+  font-family: Moon MoonTime-Regular;
+  font-size: 2.5em;
+  color: #635c69;
+}
+.mini-servicios-container .servicios-wrapper a {
+  text-decoration: none;
+}
+
+/*FOOTER*/
+footer {
+  bottom: 0;
+  left: 0;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: #121212;
+}
+footer .copyright-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+footer .copyright-container .copyright {
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 400;
+  padding: 10px 0;
+}
+footer .footer-container {
+  height: fit-content;
+  width: 100%;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .footer-container .footer-content-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+footer .footer-container .footer-content-container .website-logo {
+  margin-bottom: 1.2rem;
+  font-size: calc(1vw + 30px);
+  font-family: Moon MoonTime-Regular;
+}
+footer .footer-container .footer-content-container .footer-info {
+  margin: 0.2rem 0;
+  opacity: 0.7;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+footer .footer-container .footer-content-container .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+}
+footer .footer-container .footer-content-container .social-container i {
+  color: white;
+  font-size: 40px;
+}
+footer .footer-container .footer-content-container .social-container .social-link {
+  height: 100%;
+  width: 30px;
+  background-size: 70%;
+  background-position: center;
+  margin-right: 1rem;
+  background-repeat: no-repeat;
+}
+footer .footer-container .footer-content-container .social-container .social-link:hover {
+  opacity: 0.7;
+}
+
+/*SHOWCASE SERVICIOS*/
+.showcaseServicios {
+  width: 100%;
+  height: 600px;
+  background: url(/IMAGENES/mainServicios.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  padding-right: 150px;
+  padding-bottom: 250px;
+}
+.showcaseServicios p {
+  margin-right: 80%;
+  margin-top: 150px;
+  font-size: 7em;
+  font-family: Moon MoonTime-Regular;
+  color: #707070;
+}
+
+/*CATALOGO DE SERVICIOS*/
+.container-servicios {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-content: center;
+  background-color: #F4F4F4;
+  padding-top: 100px;
+}
+
+.tarjeta-servicios {
+  width: 550px;
+  height: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgba(124, 141, 111, 0.349);
+  position: relative;
+}
+.tarjeta-servicios:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.tarjeta-servicios img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.tarjeta-servicios h4 {
+  font-weight: 600;
+  color: #505050;
+  padding-top: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+}
+.tarjeta-servicios p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 100px;
+  color: #6a746a;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+}
+
+.tarjeta-servicios-1 {
+  width: 550px;
+  height: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgba(100, 48, 121, 0.363);
+  position: relative;
+}
+.tarjeta-servicios-1:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.tarjeta-servicios-1 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.tarjeta-servicios-1 h4 {
+  font-weight: 600;
+  color: #505050;
+  padding-top: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+}
+.tarjeta-servicios-1 p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 100px;
+  color: #6a746a;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+}
+
+.tarjeta-servicios-2 {
+  width: 550px;
+  height: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgba(121, 48, 48, 0.363);
+  position: relative;
+}
+.tarjeta-servicios-2:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.tarjeta-servicios-2 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.tarjeta-servicios-2 h4 {
+  font-weight: 600;
+  color: #505050;
+  padding-top: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+}
+.tarjeta-servicios-2 p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 100px;
+  color: #6a746a;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+}
+
+.linea-servicios {
+  border-bottom: #706b6b 2px solid;
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.link-turno {
+  font-weight: 500;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+  text-decoration: none;
+  color: #4e4e4e;
+  letter-spacing: 0.1em;
+}
+.link-turno:hover {
+  color: #e2e2e2;
+  background-color: rgba(80, 80, 80, 0.363);
+  border-radius: 10px;
+  transition: 0.7s;
+}
+
+/*CONTACT FORM*/
+.titulo-contacto {
+  font-size: 5em;
+  text-align: center;
+  font-family: Moon MoonTime-Regular;
+  color: #3e2093;
+}
+
+.contacto-container {
+  width: 50%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 98px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Bebas Neue";
+  letter-spacing: 1px;
+}
+.contacto-container .contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacto-container .contenido .left-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.contacto-container .contenido .left-side::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.contacto-container .contenido .left-side .detalles {
+  margin: 14px;
+  text-align: center;
+}
+.contacto-container .contenido .left-side .detalles i {
+  font-size: 30px;
+  color: #3e2093;
+  margin-bottom: 10px;
+}
+.contacto-container .contenido .left-side .detalles .topic {
+  font-size: 18px;
+  font-weight: 500;
+}
+.contacto-container .contenido .left-side .detalles .text-one {
+  font-size: 14px;
+  color: #afafb6;
+}
+.contacto-container .contenido .left-side .detalles .text-two {
+  font-size: 14px;
+  color: #afafb6;
+}
+.contacto-container .contenido .right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+.contacto-container .contenido .right-side .topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: #3e2093;
+}
+.contacto-container .contenido .right-side .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.contacto-container .contenido .right-side .input-box textarea {
+  padding-top: 6px;
+}
+.contacto-container .contenido .right-side .input-box .input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.contacto-container .contenido .right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.contacto-container .contenido .right-side .message-box {
+  min-height: 110px;
+}
+.contacto-container .contenido .right-side .button {
+  display: inline-block;
+  margin-top: 12px;
+}
+.contacto-container .contenido .right-side .button input[type=button] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contacto-container .contenido .right-side .button input[type=button]:hover {
+  background: #ffffff;
+  color: #3e2093;
+  border: 2px solid #3e2093;
+}
+
+/*SOBRE MI*/
+.showcase-sobremi {
+  width: 100%;
+  height: 30vh;
+  background: url(/IMAGENES/sobre-mi/sobe-mi.png) no-repeat center center/cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 10% 80% 10%;
+  background-color: white;
+}
+.sobre-mi .tittle1 {
+  font-size: 6em;
+  font-family: Moon MoonTime-Regular;
+  color: #a0a0a0;
+  grid-column-start: 2;
+  text-align: center;
+}
+.sobre-mi .text {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #444444;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  padding-top: 30px;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+.sobre-mi .firma {
+  font-size: 5em;
+  font-family: Moon MoonTime-Regular;
+  text-align: right;
+  color: #a0a0a0;
+  margin-right: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
