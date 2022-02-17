@@ -28,8 +28,9 @@
 
 .nav-bar .nav-logo h2 {
   font-family: "Dosis", sans-serif;
-  margin: 0 0 0 10px;
+  margin: -5px 0 0 5px;
   font-size: 15px;
+  letter-spacing: 2px;
 }
 
 .nav-bar .nav-main .nav-list {
@@ -44,7 +45,7 @@
   padding: 0 3vw;
   font-family: 'Bebas Neue', cursive;
   color: black;
-  font size: 2em;
+  font-size: 25px;
 }
 
 .nav-bar .nav-icons {
@@ -639,7 +640,7 @@ footer .footer-container .footer-content-container .social-container .social-lin
 
 /*# sourceMappingURL=style.css.map */
 /*RESPONSIVE MOBILE*/
-@media screen and (max-width : 480px) {
+@media screen and (max-width : 768px) {
   body {
     overflow-x: hidden;
   }
@@ -702,7 +703,7 @@ footer .footer-container .footer-content-container .social-container .social-lin
   .showcase {
     width: 100vw;
     min-height: 80vh;
-    background: url(/IMAGENES/showcase-mobile.png);
+    background: url(/IMAGENES/showcase-mobile.png) cover no-repeat;
     background-attachment: fixed;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -845,11 +846,6 @@ footer .footer-container .footer-content-container .social-container .social-lin
     width: 100%;
   }
 
-  footer .footer-container .footer-content-container .social-container i {
-    color: white;
-    font-size: 40px;
-  }
-
   footer .footer-container .footer-content-container .social-container .social-link {
     height: 100%;
     width: 30px;
@@ -859,15 +855,11 @@ footer .footer-container .footer-content-container .social-container .social-lin
     background-repeat: no-repeat;
   }
 
-  footer .footer-container .footer-content-container .social-container .social-link:hover {
-    opacity: 0.7;
-  }
-
   /*SHOWCASE SERVICIOS*/
   .showcaseServicios {
     width: 100%;
     height: 80vh;
-    background: url(/IMAGENES/showcaseServicios-mobile.png);
+    background: url(/IMAGENES/showcaseServicios-mobile.png) no-repeat cover;
     display: grid;
     grid-template-rows: 2;
   }
@@ -1233,4 +1225,584 @@ footer .footer-container .footer-content-container .social-container .social-lin
 
 .toggle .bar3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (min-width : 769px) and (max-width : 1024px) {
+
+  /*NAVBAR*/
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .nav-bar .nav-logo h1 {
+    font-family: Moon MoonTime-Regular;
+    font-size: 3em;
+    margin: 0 0 0 10px;
+  }
+
+  .nav-bar .nav-logo h2 {
+    font-family: "Dosis", sans-serif;
+    margin: -5px 0 0 5px;
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .nav-bar .nav-main .nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 30px 0 0;
+  }
+
+  .nav-bar .nav-main .nav-link {
+    text-decoration: none;
+    padding: 0 3vw;
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    font-size: 20px;
+  }
+
+  .nav-bar .nav-icons {
+    margin: 0 6% 0 0;
+    padding: 10px;
+  }
+
+  .nav-bar .nav-icons i {
+    color: black;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  .nav-bar .nav-icons a {
+    text-decoration: none;
+  }
+
+  .nav-bar .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  /*SHOWCASE*/
+  .showcase {
+    width: 100vw;
+    height: 60vh;
+    background: url(/IMAGENES/showcase-tablet.png) cover no-repeat;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .showcase h1 {
+    margin-left: 20px;
+    font-family: Moon MoonTime-Regular;
+    font-size: 150px;
+    color: rgba(92, 61, 22, 0.61);
+  }
+
+  .showcase .button a {
+    margin-left: 20px;
+    font-size: 30px;
+    grid-row-start: 3;
+    font-family: "Lato", sans-serif;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  }
+
+  /*GALERY*/
+  .mini-servicios-container {
+    width: 100%;
+    height: 40%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+  }
+
+  .mini-servicios-container h2 {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 10px;
+    font-family: Moon MoonTime-Regular;
+    color: #88887b;
+  }
+
+  .mini-servicios-container .mini-servicios-grupos {
+    display: grid;
+    grid-template-columns: repeat 33% 33% 33%;
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  .mini-servicios-container .servicios-wrapper img {
+    width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 10px #0000008c solid;
+  }
+
+  /*FOOTER*/
+  footer {
+    bottom: 0;
+    left: 0;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: #121212;
+  }
+
+  footer .footer-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  footer .footer-container .footer-content-container .website-logo {
+    font-size: calc(1vw + 50px);
+    font-family: Moon MoonTime-Regular;
+  }
+
+  footer .copyright-container {
+    width: 100%;
+    height: 100%;
+    height: fit-content;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  footer .copyright-container .copyright {
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: 400;
+  }
+
+  /*SHOWCASE SERVICIOS*/
+  .showcaseServicios {
+    width: 100%;
+    height: 600px;
+    background: url(/IMAGENES/showcaseservicios-tablet.png)no-repeat cover;
+    background-attachment: fixed;
+  }
+
+  .showcaseServicios p {
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 7em;
+    font-family: Moon MoonTime-Regular;
+    color: #707070;
+  }
+
+  /*CATALOGO DE SERVICIOS*/
+  .container-servicios {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    background-color: #F4F4F4;
+  }
+
+  .tarjeta-servicios {
+    width: 200px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(124, 141, 111, 0.349);
+    position: relative;
+  }
+
+  .tarjeta-servicios img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .tarjeta-servicios h4 {
+    font-weight: 600;
+    color: #505050;
+    padding-top: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 100px;
+    color: #6a746a;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-1 {
+    width: 200px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(100, 48, 121, 0.363);
+    position: relative;
+  }
+
+  .tarjeta-servicios-1 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .tarjeta-servicios-1 h4 {
+    font-weight: 600;
+    color: #505050;
+    padding-top: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-1 p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 100px;
+    color: #6a746a;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-2 {
+    width: 200px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(121, 48, 48, 0.363);
+    position: relative;
+  }
+
+  .tarjeta-servicios-2 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .tarjeta-servicios-2 h4 {
+    font-weight: 600;
+    color: #505050;
+    padding-top: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-2 p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 100px;
+    color: #6a746a;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .linea-servicios {
+    border-bottom: #706b6b 2px solid;
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .link-turno {
+    font-weight: 500;
+    font-family: "Bebas Neue", cursive;
+    font-size: 30px;
+    text-decoration: none;
+    color: #4e4e4e;
+    letter-spacing: 0.1em;
+  }
+
+  /*CONTACT FORM*/
+  .titulo-contacto {
+    font-size: 5em;
+    text-align: center;
+    font-family: Moon MoonTime-Regular;
+    color: #3e2093;
+  }
+
+  .contacto-container {
+    width: 80%;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 98px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+  }
+
+  /*SOBRE MI*/
+  .showcase-sobremi {
+    width: 100%;
+    height: 30vh;
+    background: url(/IMAGENES/sobre-mi/sobe-mi.png) no-repeat center center/cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: none;
+  }
+
+  .sobre-mi {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 10% 80% 10%;
+    background-color: white;
+  }
+
+  .sobre-mi .text {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-top: 30px;
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+}
+
+@media (min-width : 1025px) and (max-width : 1100px) {
+
+  /*SHOWCASE*/
+  .showcase h1 {
+    margin-left: 10px;
+    font-family: Moon MoonTime-Regular;
+    font-size: 200px;
+    color: rgba(92, 61, 22, 0.61);
+  }
+
+  .showcase .button a {
+    margin-left: 5px;
+    font-size: 50px;
+    font-family: "Lato", sans-serif;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  }
+
+  .showcase .button a:hover {
+    color: black;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+
+  /*GALERY*/
+  .mini-servicios-container {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+  }
+
+  .mini-servicios-container .servicios-wrapper img {
+    width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 10px #0000008c solid;
+  }
+
+  .mini-servicios-container .servicios-wrapper p {
+    margin-top: 0 50px 0 0;
+    font-family: Moon MoonTime-Regular;
+    font-size: 2.5em;
+    color: #635c69;
+  }
+
+  /*CATALOGO DE SERVICIOS*/
+  .container-servicios {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    background-color: #F4F4F4;
+    padding-top: 100px;
+  }
+
+  .tarjeta-servicios {
+    width: 300px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(124, 141, 111, 0.349);
+    position: relative;
+  }
+
+  .tarjeta-servicios img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .tarjeta-servicios h4 {
+    font-weight: 600;
+    color: #505050;
+    padding-top: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 100px;
+    color: #6a746a;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-1 {
+    width: 300px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(100, 48, 121, 0.363);
+    position: relative;
+  }
+
+  .tarjeta-servicios-1 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .tarjeta-servicios-1 h4 {
+    font-weight: 600;
+    color: #505050;
+    padding-top: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-1 p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 100px;
+    color: #6a746a;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-2 {
+    width: 300px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(121, 48, 48, 0.363);
+    position: relative;
+  }
+
+  .tarjeta-servicios-2 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  .tarjeta-servicios-2 h4 {
+    font-weight: 600;
+    color: #505050;
+    padding-top: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  .tarjeta-servicios-2 p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 100px;
+    color: #6a746a;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 20px;
+  }
+
+  /*SOBRE MI*/
+  .showcase-sobremi {
+    width: 100%;
+    height: 30vh;
+    background: url(/IMAGENES/sobre-mi/sobe-mi.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  .sobre-mi .tittle1 {
+    font-size: 4em;
+    font-family: Moon MoonTime-Regular;
+    color: #a0a0a0;
+    grid-column-start: 2;
+    text-align: center;
+  }
+
+  .sobre-mi .text {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-top: 30px;
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+
 }
