@@ -17,23 +17,6 @@ $breakpoints: (
     @content;
   }
 }
-.nav-active {
-  @include media-down(md) {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(50px);
-  }
-}
 
 .toggle .bar1 {
   transform: rotate(-45deg) translate(-5px, 6px);
@@ -80,10 +63,9 @@ body {
   .nav-main {
     @include media-down(md) {
       position: absolute;
-      right: 0px;
       height: 90vh;
       top: 10vh;
-      display: flex;
+      display: none;
       flex-direction: column;
       background-color: #b7b3b0;
       width: 100%;
@@ -119,6 +101,12 @@ body {
       @include media-down(md) {
         font-family: "Bebas Neue", cursive;
       }
+    }
+  }
+  .nav-active {
+    @include media-down(md) {
+      transform: translateX(0%);
+      display: flex;
     }
   }
   .nav-icons {
@@ -430,14 +418,14 @@ footer {
   flex-direction: column;
   justify-content: right;
   align-items: flex-end;
-  padding-right: 150px;
   padding-bottom: 250px;
   p {
-    margin-right: 80%;
-    margin-top: 150px;
+    margin-left: 30px;
+    margin-top: 10px;
     font-size: 7em;
     font-family: Moon MoonTime-Regular;
     color: #707070;
+    margin-right: 20px;
   }
 }
 /*CATALOGO DE SERVICIOS*/
